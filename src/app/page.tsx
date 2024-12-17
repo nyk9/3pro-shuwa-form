@@ -2,7 +2,7 @@ import BBSCardList from "@/components/layouts/BBSCardList";
 import { BBSData } from "@/types/types";
 
 async function getBBSAllData() {
-  const response = await fetch("http://localhost:3000/api/post", {
+  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/post`, {
     cache: "no-cache",
     headers: {
       "Content-Type": "application/json",
